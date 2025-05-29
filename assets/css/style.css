@@ -4963,17 +4963,21 @@ a:hover {
   and (max-device-width : 480px){
    .mobileHide { display: none;}
 }
-table {
+ table {
     width: 100%;
     border-collapse: collapse;
     font-family: 'Arial', sans-serif;
     font-size: 16px;
+    overflow-x: auto;
+    display: block;
+    max-width: 100%;
 }
 
 th, td {
     border: 1px solid #4d338a36;
     padding: 10px;
     text-align: left;
+    word-break: break-word;
 }
 
 th {
@@ -4981,6 +4985,49 @@ th {
     color: white;
     font-weight: bold;
 }
+
 tr:hover {
     background-color: #0d0e1b;
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+    }
+    thead tr {
+        display: none;
+    }
+    tr {
+        margin-bottom: 15px;
+        border-bottom: 2px solid #ff7a21;
+        background: #080811;
+    }
+    td {
+        position: relative;
+        padding-left: 50%;
+        min-height: 40px;
+        border: none;
+        border-bottom: 1px solid #4d338a36;
+    }
+    td:before {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 45%;
+        white-space: pre-wrap;
+        font-weight: bold;
+        color: #ff7a21;
+        content: attr(data-label);
+    }
+}
+/* Optional: Make font smaller on very small screens */
+@media (max-width: 480px) {
+    table {
+        font-size: 14px;
+    }
+    td, th {
+        padding: 8px;
+    }
 }
