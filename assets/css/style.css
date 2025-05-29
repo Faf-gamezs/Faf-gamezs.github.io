@@ -4920,8 +4920,7 @@ input[type="radio"]:checked~label {
 .contact-form-inn form .form-action {
     text-align: center
 }
-
-.col-md-9,
+/*================================================*/
 .box {
     border: 2px solid #ff7a21;
     /* Adjust the border width if needed */
@@ -4963,4 +4962,25 @@ a:hover {
   and (min-device-width : 320px)
   and (max-device-width : 480px){
    .mobileHide { display: none;}
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+}
+
+th, td {
+    border: 1px solid #4d338a36;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #ff7a21;
+    color: white;
+    font-weight: bold;
+}
+tr:hover {
+    background-color: #0d0e1b;
 }
