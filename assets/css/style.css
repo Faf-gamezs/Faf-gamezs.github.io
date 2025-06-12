@@ -4970,8 +4970,8 @@ a:hover {
     font-size: 16px;
     overflow-x: auto;
     display: block;
-    max-width: 100%;
-}
+     max-width: max-content; /* Set a max width for better centering */
+ }
 
 th, td {
     border: 1px solid #4d338a36;
